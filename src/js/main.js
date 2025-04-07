@@ -74,10 +74,11 @@ const westMonkseaton = L.circleMarker([72.15, 74.74], {
 });
 const monkseaton = L.circleMarker([72.15, 81.10], {
   radius: 5,
-  opacity: 1,          
+  opacity: 0,          
   fillOpacity: 0       
 });
 
+const stations = [airport, callertonPark, bankFoot, kingstonPark, fawdon, wansbeckRoad, regentCentre, longbenton, fourLaneEnds, benton, palmersville, northumberlandPark, shiremoor, monkseaton, westMonkseaton];
 
 // Align map according to client's browser width
 function mapPositionTwo() {
@@ -102,12 +103,10 @@ function mapPositionTwo() {
       console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
       });
     
-    monkseaton.addTo(map);
-    monkseaton.bindPopup(`
-      <strong>Airport Station</strong><br>
-      Status: On time<br>
-      Next train: 2 mins
-    `);
+      stations.forEach(station => {
+        station.addTo(map);
+        station.bindPopup(`<h1>TEST</h1>`);
+      });
 
   } else {
     var map = L.map('map', {
