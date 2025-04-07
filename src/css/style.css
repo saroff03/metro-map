@@ -1,0 +1,11 @@
+body, html {
+  margin: 0;
+}
+#map {
+min-height: 98vh;
+background: white; 
+}
+
+footer {
+  max-height: 2vh;
+}
