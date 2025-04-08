@@ -7,7 +7,7 @@ const airport = L.circleMarker([72.11, 8.33], {
   opacity: 0,          
   fillOpacity: 0       
 });
-const callertonPark = L.circleMarker([72.11, 11.53], {
+const callertonParkway = L.circleMarker([72.11, 11.53], {
   radius: 5,
   opacity: 0,          
   fillOpacity: 0       
@@ -78,7 +78,7 @@ const monkseaton = L.circleMarker([72.15, 81.10], {
   fillOpacity: 0       
 });
 
-const stations = [airport, callertonPark, bankFoot, kingstonPark, fawdon, wansbeckRoad, regentCentre, longbenton, fourLaneEnds, benton, palmersville, northumberlandPark, shiremoor, monkseaton, westMonkseaton];
+const stations = [airport, callertonParkway, bankFoot, kingstonPark, fawdon, wansbeckRoad, regentCentre, longbenton, fourLaneEnds, benton, palmersville, northumberlandPark, shiremoor, monkseaton, westMonkseaton];
 
 // Align map according to client's browser width
 function mapPositionTwo() {
@@ -105,7 +105,6 @@ function mapPositionTwo() {
     
       stations.forEach(station => {
         station.addTo(map);
-        station.bindPopup(`<h1>TEST</h1>`);
       });
 
   } else {
@@ -121,4 +120,57 @@ function mapPositionTwo() {
 };
 
 mapPositionTwo();
+
+async function airportData() {
+  const urls = [
+    { platform: 1, url: "https://metro-rti.nexus.org.uk/api/times/APT/1" },
+    { platform: 2, url: "https://metro-rti.nexus.org.uk/api/times/APT/2" }
+  ];
+
+  let popupContent = `<strong class="center">Airport Station</strong>`;
+
+  try {
+    for (const entry of urls) {
+      const response = await fetch(entry.url);
+      if (!response.ok) throw new Error(`Error fetching platform ${entry.platform}: ${response.status}`);
+      const trains = await response.json();
+
+      popupContent += `<hr><strong class="center">Platform ${entry.platform}</strong>`;
+
+      if (trains.length === 0) {
+        popupContent += `<em>No upcoming trains.</em>`;
+      } else {
+        trains.slice(0, 3).forEach(train => {
+          const lineColor = train.line === "GREEN" ? "#3db94d" : "#000000";
+          popupContent += `
+            <div style="margin-top: 6px;">
+              <table>
+                <tr>
+                  <th>Train</th>
+                  <th>Due in</th>
+                  <th>Destination</th>
+                  <th>Line</th>
+                </tr>
+                <tr>
+                  <td> ${train.trn}</td>
+                  <td> ${train.dueIn} min</td>
+                  <td> ${train.destination}</td>
+                  <td style="color:${lineColor}"> ${train.line}</td>
+                </tr>
+              </table>
+            </div>
+          `;
+        });
+      }
+    }
+
+    airport.bindPopup(popupContent);
+
+  } catch (error) {
+    console.error("Error loading Bank Foot data:", error);
+  }
+};
+
+
+airportData();
 

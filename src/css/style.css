@@ -9,3 +9,34 @@ background: white;
 footer {
   max-height: 2vh;
 }
+
+.center {
+  display: block;
+  text-align: center;
+}
+
+em {
+  display: block;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-bottom: 1px solid #dee2e6;
+  width: 100%;
+  }
+  
+  th, td  {
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding-right: 3px;
+  }
+  
+  th:last-child, td:last-child {
+  border-right:none;
+  }
+
+  tr:nth-child(2) {
+    background-color: #dee2e6;
+    }
+
