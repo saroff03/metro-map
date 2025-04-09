@@ -103,19 +103,85 @@ function mapPositionTwo() {
       console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
       });
     
-      stations.forEach(station => {
-        station.addTo(map);
-      });
-
-  } else {
+    stations.forEach(station => {
+      station.addTo(map);
+    });
+  } 
+  
+  else if ((width >= 1025) && (width <= 1280)) {
     var map = L.map('map', {
-      center: [0, 0],
-      zoom: 5
+      center: [67, 50],
+      zoom: 4,
+      zoomSnap: 0,
+      maxZoom: 5,
+      minZoom: 3.5
     });
     
     var imageUrl = 'images/map.svg',
     imageBounds = [[0, 0], [100, 100]];
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+    stations.forEach(station => {
+      station.addTo(map);
+    })
+  }
+
+  else if ((width >= 768) && (width <= 1024)) {
+    var map = L.map('map', {
+      center: [67, 50],
+      zoom: 2,
+      zoomSnap: 0,
+      maxZoom: 5,
+      minZoom: 3.5
+    });
+    
+    var imageUrl = 'images/map.svg',
+    imageBounds = [[0, 0], [100, 100]];
+    L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+    stations.forEach(station => {
+      station.addTo(map);
+    })
+  }
+
+  else if ((width >= 481) && (width <= 767)) {
+    var map = L.map('map', {
+      center: [67, 50],
+      zoom: 3,
+      zoomSnap: 0,
+      maxZoom: 5,
+      minZoom: 3
+    });
+    
+    var imageUrl = 'images/map.svg',
+    imageBounds = [[0, 0], [100, 100]];
+    L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+    stations.forEach(station => {
+      station.addTo(map);
+    })
+  }
+
+  else if ((width >= 320) && (width <= 480)) {
+    var map = L.map('map', {
+      center: [67, 50],
+      zoom: 3,
+      zoomSnap: 1,
+      maxZoom: 5,
+      minZoom: 2
+    });
+    
+    var imageUrl = 'images/map.svg',
+    imageBounds = [[0, 0], [100, 100]];
+    L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+    stations.forEach(station => {
+      station.addTo(map);
+    })
+  }
+
+  else {
+    alert("Error loading map. Browser width currently not supported.")
   }
 };
 
@@ -167,10 +233,10 @@ async function airportData() {
     airport.bindPopup(popupContent);
 
   } catch (error) {
-    console.error("Error loading Bank Foot data:", error);
+    console.error("Error loading Airport Station data:", error);
   }
 };
 
 
-airportData();
+//airportData();
 
