@@ -1,7 +1,7 @@
 // Client browser's width
 const width = window.innerWidth;
 
-// First Row Stations
+// Station Markers
 const airport = L.circleMarker([72.11, 8.33], {
   radius: 5,
   opacity: 0,          
@@ -77,8 +77,603 @@ const monkseaton = L.circleMarker([72.15, 81.10], {
   opacity: 0,          
   fillOpacity: 0       
 });
+const southGosforth1 = L.circleMarker([71.60, 30], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const southGosforth2 = L.circleMarker([71.62, 30.58], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const whitleyBay = L.circleMarker([71.45, 86.67], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const ilfordRoad1 = L.circleMarker([71.03, 31.04], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const ilfordRoad2 = L.circleMarker([71.03, 31.75], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const westJesmond1 = L.circleMarker([70.38, 32.08], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const westJesmond2 = L.circleMarker([70.38, 32.90], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const cullercoats = L.circleMarker([70.30, 86.64], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const jesmond1 = L.circleMarker([69.75, 33.23], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const jesmond2 = L.circleMarker([69.75, 33.80], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const haymarket1 = L.circleMarker([69.18, 34.21], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const haymarket2 = L.circleMarker([69.18, 34.80], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const tynemouth = L.circleMarker([69.08, 86.67], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const stJames = L.circleMarker([68.31, 33.17], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const manors = L.circleMarker([68.31, 44.43], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const byker = L.circleMarker([68.31, 48.92], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const chillinghamRoad = L.circleMarker([68.31, 53.43], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const walkergate = L.circleMarker([68.31, 57.97], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const wallsend = L.circleMarker([68.31, 62.53], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const hadrianRoad = L.circleMarker([68.31, 66.98], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const howdon = L.circleMarker([68.31, 71.50], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const percyMain = L.circleMarker([68.31, 76.02], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const meadowWell = L.circleMarker([68.31, 80.56], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const northShields = L.circleMarker([68.31, 85.06], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const central1 = L.circleMarker([67.47, 36.73], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const central2 = L.circleMarker([67.47, 37.46], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const gateshead1 = L.circleMarker([65.94, 42.18], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const gateshead2 = L.circleMarker([65.67, 42.19], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const gatesheadStadium1 = L.circleMarker([65.94, 47.07], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const gatesheadStadium2 = L.circleMarker([65.67, 47.06], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const felling1 = L.circleMarker([65.94, 51.54], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const felling2 = L.circleMarker([65.67, 51.54], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const heworth1 = L.circleMarker([65.94, 56.55], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const heworth2 = L.circleMarker([65.63, 56.55], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const pelaw1 = L.circleMarker([65.94, 60.77], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const pelaw2 = L.circleMarker([65.65, 60.82], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const hebburn = L.circleMarker([65.92, 65.12], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const jarrow = L.circleMarker([65.92, 68.46], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const bede = L.circleMarker([65.92, 71.80], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const simonside = L.circleMarker([65.92, 75.05], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const tyneDock = L.circleMarker([65.92, 78.39], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const chichester = L.circleMarker([65.92, 81.78], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const southShields = L.circleMarker([65.92, 85.07], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const fellgate = L.circleMarker([64.12, 66.31], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const brockleyWhins = L.circleMarker([64.12, 72.55], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const eastBoldon = L.circleMarker([64.12, 77.92], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const seaburn = L.circleMarker([63.54, 86.57], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const stadiumOfLight = L.circleMarker([62.75, 86.61], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const stPeters = L.circleMarker([61.84, 86.61], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const sunderland = L.circleMarker([59.99, 86.61], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const southHylton = L.circleMarker([58.87, 68.15], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const pallion = L.circleMarker([58.87, 72.46], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const millfield = L.circleMarker([58.87, 76.70], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const unviersity = L.circleMarker([58.87, 81.03], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const parkLane = L.circleMarker([58.87, 85.2], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const monument1 = L.circleMarker([68.34, 35.55], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
+const monument2 = L.circleMarker([68.35, 36.16], {
+  radius: 5,
+  opacity: 0,          
+  fillOpacity: 0       
+});
 
-const stations = [airport, callertonParkway, bankFoot, kingstonPark, fawdon, wansbeckRoad, regentCentre, longbenton, fourLaneEnds, benton, palmersville, northumberlandPark, shiremoor, monkseaton, westMonkseaton];
+const stations = [airport, callertonParkway, bankFoot, kingstonPark, fawdon, wansbeckRoad, regentCentre, longbenton, fourLaneEnds, benton, palmersville, northumberlandPark, shiremoor, monkseaton, westMonkseaton, southGosforth1, southGosforth2, whitleyBay, ilfordRoad1, ilfordRoad2, westJesmond1, westJesmond2, cullercoats, jesmond1, jesmond2, haymarket1, haymarket2, tynemouth, stJames, manors, byker, chillinghamRoad, walkergate, wallsend, hadrianRoad, howdon, percyMain, meadowWell, northShields, central1, central2, gateshead1, gateshead2, gatesheadStadium1, gatesheadStadium2, felling1, felling2, heworth1, heworth2, pelaw1, pelaw2, hebburn, jarrow, bede, simonside, tyneDock, chichester,southShields, fellgate, brockleyWhins, eastBoldon, seaburn, stadiumOfLight, stPeters, sunderland, southHylton, pallion, millfield, unviersity, parkLane, monument1, monument2];
+
+const stationList = [
+  {
+    code: "APT",
+    name: "Airport",
+    marker: airport
+  },
+  {
+    code: "BFT",
+    name: "Bank Foot",
+    marker: bankFoot
+  },
+  {
+    code: "MSN",
+    name: "Monkseaton",
+    marker: monkseaton
+  },
+  {
+    code: "BDE",
+    name: "Bede",
+    marker: bede 
+  },
+  {
+    code: "BTN",
+    name: "Benton",
+    marker: benton
+  },
+  {
+    code: "BYW",
+    name: "Brockley Whins",
+    marker: brockleyWhins
+  },
+  {
+    code: "BYK",
+    name: "Byker",
+    marker: byker
+  },
+  {
+    code: "CAL",
+    name: "Callerton Parkway",
+    marker: callertonParkway
+  },
+  {
+    code: "CEN",
+    name: "Central",
+    marker: central1,
+    marker2: central2
+  },
+  {
+    code: "CHI",
+    name: "Chichester",
+    marker: chichester
+  },
+  {
+    code: "CRD",
+    name: "Chillingham Road",
+    marker: chillinghamRoad
+  },
+  {
+    code: "CUL",
+    name: "Cullercoats",
+    marker: cullercoats
+  },
+  {
+    code: "EBO",
+    name: "East Boldon",
+    marker: eastBoldon
+  },
+  {
+    code: "FAW",
+    name: "Fawdon",
+    marker: fawdon
+  },
+  {
+    code: "FGT",
+    name: "Fellgate",
+    marker: fellgate
+  },
+  {
+    code: "FEL",
+    name: "Felling",
+    marker: felling1,
+    marker2: felling2
+  },
+  {
+    code: "FLE",
+    name: "Four Lane Ends",
+    marker: fourLaneEnds
+  },
+  {
+    code: "GHD",
+    name: "Gateshead",
+    marker: gateshead1,
+    marker2: gateshead2
+  },
+  {
+    code: "GST",
+    name: "Gateshead Stadium",
+    marker: gatesheadStadium1,
+    marker2: gatesheadStadium2
+  },
+  {
+    code: "HDR",
+    name: "Hadrian Road",
+    marker: hadrianRoad
+  },
+  {
+    code: "HAY",
+    name: "Haymarket",
+    marker: haymarket1,
+    marker2: haymarket2
+  },
+  {
+    code: "HEB",
+    name: "Hebburn",
+    marker: hebburn
+  },
+  {
+    code: "HTH",
+    name: "Heworth",
+    marker: heworth1,
+    marker2: heworth2
+  },
+  {
+    code: "HOW",
+    name: "Howdon",
+    marker: howdon
+  },
+  {
+    code: "ILF",
+    name: "Ilford Road",
+    marker: ilfordRoad1,
+    marker2: ilfordRoad2
+  },
+  {
+    code: "JAR",
+    name: "Jarrow",
+    marker: jarrow
+  },
+  {
+    code: "JES",
+    name: "Jesmond",
+    marker: jesmond1,
+    marker2: jesmond2
+  },
+  {
+    code: "KSP",
+    name: "Kingston Park",
+    marker: kingstonPark
+  },
+  {
+    code: "LBN",
+    name: "Longbenton",
+    marker: longbenton
+  },
+  {
+    code: "MAN",
+    name: "Manors",
+    marker: manors
+  },
+  {
+    code: "MLF",
+    name: "Millfield",
+    marker: millfield
+  },
+  {
+    code: "MWL",
+    name: "Meadow Well",
+    marker: meadowWell 
+  },
+  {
+    code: "NSH",
+    name: "North Shields",
+    marker: northShields
+  },
+  {
+    code: "NPK",
+    name: "Northumberland Park",
+    marker: northumberlandPark
+  },
+  {
+    code: "PAL",
+    name: "Pallion",
+    marker: pallion
+  },
+  {
+    code: "PMV",
+    name: "Palmersville",
+    marker: palmersville
+  },
+  {
+    code: "PLI",
+    name: "Park Lane",
+    marker: parkLane
+  },
+  {
+    code: "PLW",
+    name: "Pelaw",
+    marker: pelaw1,
+    marker2: pelaw2
+  },
+  {
+    code: "PCM",
+    name: "Percy Main",
+    marker: percyMain
+  },
+  {
+    code: "RGC",
+    name: "Regent Centre",
+    marker: regentCentre
+  },
+  {
+    code: "SBN",
+    name: "Seaburn",
+    marker: seaburn
+  },
+  {
+    code: "SMR",
+    name: "Shiremoor",
+    marker: shiremoor
+  },
+  {
+    code: "SMD",
+    name: "Simonside",
+    marker: simonside
+  },
+  {
+    code: "SGF",
+    name: "South Gosforth",
+    marker: southGosforth1,
+    marker2: southGosforth2
+  },
+  {
+    code: "SHL",
+    name: "South Hylton",
+    marker: southHylton
+  },
+  {
+    code: "SSS",
+    name: "South Shields",
+    marker: southShields
+  },
+  {
+    code: "SJM",
+    name: "St James",
+    marker: stJames
+  },
+  {
+    code: "MSP",
+    name: "St Peter's",
+    marker: stPeters
+  },
+  {
+    code: "SFC",
+    name: "Stadium of Light",
+    marker: stadiumOfLight
+  },
+  {
+    code: "SUN",
+    name: "Sunderland",
+    marker: sunderland 
+  },
+  {
+    code: "TDK",
+    name: "Tyne Dock",
+    marker: tyneDock
+  },
+  {
+    code: "TYN",
+    name: "Tynemouth",
+    marker: tynemouth
+  },
+  {
+    code: "UNI",
+    name: "University",
+    marker: unviersity
+  },
+  {
+    code: "WKG",
+    name: "Walkergate",
+    marker: walkergate
+  },
+  {
+    code: "WSD",
+    name: "Wallsend",
+    marker: wallsend
+  },
+  {
+    code: "WJS",
+    name: "West Jesmond",
+    marker: westJesmond1,
+    marker2: westJesmond2
+  },
+  {
+    code: "WBR",
+    name: "Wansbeck Road",
+    marker: wansbeckRoad
+  },
+  {
+    code: "WMN",
+    name: "West Monkseaton",
+    marker: westMonkseaton
+  },
+  {
+    code: "WTL",
+    name: "Whitley Bay",
+    marker: whitleyBay
+  }
+];
+
 
 // Align map according to client's browser width
 function mapPositionTwo() {
@@ -94,17 +689,8 @@ function mapPositionTwo() {
     var imageUrl = 'images/map.svg',
     imageBounds = [[0, 0], [100, 100]];
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
-
-    // Function to show coordinates on mouse click 
-    map.on('click', function(e){
-      var coord = e.latlng;
-      var lat = coord.lat;
-      var lng = coord.lng;
-      console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
-      });
-    
     stations.forEach(station => {
-      station.addTo(map);
+    station.addTo(map);
     });
   } 
   
@@ -122,7 +708,7 @@ function mapPositionTwo() {
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
     stations.forEach(station => {
-      station.addTo(map);
+    station.addTo(map);
     })
   }
 
@@ -140,7 +726,7 @@ function mapPositionTwo() {
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
     stations.forEach(station => {
-      station.addTo(map);
+    station.addTo(map);
     })
   }
 
@@ -158,7 +744,7 @@ function mapPositionTwo() {
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
     stations.forEach(station => {
-      station.addTo(map);
+    station.addTo(map);
     })
   }
 
@@ -176,7 +762,7 @@ function mapPositionTwo() {
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
     stations.forEach(station => {
-      station.addTo(map);
+    station.addTo(map);
     })
   }
 
@@ -187,13 +773,15 @@ function mapPositionTwo() {
 
 mapPositionTwo();
 
-async function airportData() {
+// Get station/platform data for Monument Station
+async function monumentData() {
   const urls = [
-    { platform: 1, url: "https://metro-rti.nexus.org.uk/api/times/APT/1" },
-    { platform: 2, url: "https://metro-rti.nexus.org.uk/api/times/APT/2" }
+    { platform: 1, url: "https://metro-rti.nexus.org.uk/api/times/MTS/1" },
+    { platform: 2, url: "https://metro-rti.nexus.org.uk/api/times/MTS/2" },
+    { platform: "3/4", url: "https://metro-rti.nexus.org.uk/api/times/MTW/1" },
   ];
 
-  let popupContent = `<strong class="center">Airport Station</strong>`;
+  let popupContent = `<strong class="center">Monument Station</strong>`;
 
   try {
     for (const entry of urls) {
@@ -207,7 +795,7 @@ async function airportData() {
         popupContent += `<em>No upcoming trains.</em>`;
       } else {
         trains.slice(0, 3).forEach(train => {
-          const lineColor = train.line === "GREEN" ? "#3db94d" : "#000000";
+          const lineColor = train.line === "GREEN" ? "#3db94d" : "#fab217";
           popupContent += `
             <div style="margin-top: 6px;">
               <table>
@@ -221,7 +809,7 @@ async function airportData() {
                   <td> ${train.trn}</td>
                   <td> ${train.dueIn} min</td>
                   <td> ${train.destination}</td>
-                  <td style="color:${lineColor}"> ${train.line}</td>
+                  <td style="background-color:${lineColor}"> ${train.line}</td>
                 </tr>
               </table>
             </div>
@@ -230,13 +818,71 @@ async function airportData() {
       }
     }
 
-    airport.bindPopup(popupContent);
+    monument1.bindPopup(popupContent);
+    monument2.bindPopup(popupContent);
 
   } catch (error) {
-    console.error("Error loading Airport Station data:", error);
+    console.error("Error loading Monument Station data:", error);
   }
 };
 
+// monumentData();
 
-//airportData();
+// Function to load data for all stations
+async function loadAllStationData() {
+  for (const station of stationList) {
+    const urls = [
+      { platform: 1, url: `https://metro-rti.nexus.org.uk/api/times/${station.code}/1` },
+      { platform: 2, url: `https://metro-rti.nexus.org.uk/api/times/${station.code}/2` }
+    ];
+
+    let popupContent = `<strong class="center">${station.name} Station</strong>`;
+
+    try {
+      for (const entry of urls) {
+        const response = await fetch(entry.url);
+        if (!response.ok) throw new Error(`Error fetching platform ${entry.platform}: ${response.status}`);
+        const trains = await response.json();
+
+        popupContent += `<hr><strong class="center">Platform ${entry.platform}</strong>`;
+
+        if (trains.length === 0) {
+          popupContent += `<em>No upcoming trains.</em>`;
+        } else {
+          trains.slice(0, 3).forEach(train => {
+            const lineColor = train.line === "GREEN" ? "#3db94d" : "#fab217";
+            popupContent += `
+              <div style="margin-top: 6px;">
+              <table>
+                <tr>
+                  <th>Train</th>
+                  <th>Due in</th>
+                  <th>Destination</th>
+                  <th>Line</th>
+                </tr>
+                <tr>
+                  <td> ${train.trn}</td>
+                  <td> ${train.dueIn} min</td>
+                  <td> ${train.destination}</td>
+                  <td style="background-color:${lineColor}"> ${train.line}</td>
+                </tr>
+              </table>
+            </div>
+            `;
+          });
+        }
+      }
+
+      // Bind the popup to the station's marker
+      station.marker.bindPopup(popupContent);
+      station.marker2.bindPopup(popupContent);
+
+    } catch (error) {
+      console.error(`Error loading data for ${station.name}:`, error);
+    }
+  }
+};
+
+// loadAllStationData();
+
 
