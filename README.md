@@ -3,7 +3,7 @@
 A live interactive map for the Tyne and Wear Metro system, showing real-time train data using the Nexus Metro RTI API. Built using Leaflet.js and custom SVG overlays.
 
 ## 🌐 Live Demo
-Check it out live here: [Your Live Site URL](https://tynemetro.live/)
+Check it out live here: [tynemetro.live](https://tynemetro.live/)
 
 ## 📦 Features
 
