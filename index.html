@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Newcastle's Tyne and Wear Metro live interactive map">
+  <meta name="keywords" content="HTML, CSS, Newcastle, Tyne and Wear Metro, Live Map, Interactive map, Newcastle's Metro">
+  <meta name="author" content="Stoyan Sarov">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tyne and Wear Metro Live Map</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel='shortcut icon' type='image/x-icon' href='images/favicon.svg'>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS & JavaScript-->  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+</head>
+<body>
+  <div id="map"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade text-center" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center">
+          <h1 class="modal-title fs-5" id="infoModalLabel">About this Project</h1>
+        </div>
+        <div class="modal-body">
+          <p>This is an independent project showing live train data for the <a href="https://www.nexus.org.uk/metro" target="_blank">Tyne and Wear Metro</a>. All times are unofficial and provided by the <a href="https://github.com/danielgjackson/metro-rti" target="_blank">Nexus Metro RTI API</a>. 
+          <p>All data and service information belong to Nexus and are used under fair use for informational purposes.
+          </p>
+          <p>This site is <strong>not affiliated with or endorsed by Nexus or Tyne and Wear Metro</strong>. All trademarks, branding, and data remain the property of their respective owners.
+          </p>
+          </p>
+          <p>Want to get in touch? Message me on <a href="https://x.com/saroff03" target="_blank">X</a></p>
+          <p>Made by <a href="https://github.com/saroff03" target="_blank"> Stoyan Sarov</a> &copy; 2025</p>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal" aria-label="Close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a data-bs-toggle="modal" data-bs-target="#infoModal" id="linkModal">About this map</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
