@@ -826,7 +826,7 @@ async function monumentData() {
   }
 };
 
-// monumentData();
+monumentData();
 
 // Function to load data for all stations
 async function loadAllStationData() {
@@ -847,7 +847,7 @@ async function loadAllStationData() {
         popupContent += `<hr><strong class="center">Platform ${entry.platform}</strong>`;
 
         if (trains.length === 0) {
-          popupContent += `<em>No upcoming trains.</em>`;
+          popupContent += `<em>No departing trains.</em>`;
         } else {
           trains.slice(0, 3).forEach(train => {
             const lineColor = train.line === "GREEN" ? "#3db94d" : "#fab217";
@@ -873,9 +873,9 @@ async function loadAllStationData() {
         }
       }
 
-      // Bind the popup to the station's marker
-      station.marker.bindPopup(popupContent);
-      station.marker2.bindPopup(popupContent);
+    // Bind the popup to the station's marker
+    station.marker.bindPopup(popupContent);
+    station.marker2?.bindPopup(popupContent);
 
     } catch (error) {
       console.error(`Error loading data for ${station.name}:`, error);
@@ -883,6 +883,12 @@ async function loadAllStationData() {
   }
 };
 
-// loadAllStationData();
+loadAllStationData();
+
+//Refresh API data every 60 seconds
+setInterval(() => {
+  monumentData();
+  loadAllStationData();
+}, 60000);
 
 

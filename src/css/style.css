@@ -8,6 +8,11 @@ background: white;
 
 footer {
   max-height: 2vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .center {
@@ -39,3 +44,23 @@ table {
   tr:nth-child(2) {
     background-color: #dee2e6;
     }
+
+.white-bg {
+  color: white;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+#linkModal {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
