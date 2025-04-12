@@ -1,6 +1,10 @@
 // Client browser's width
 const width = window.innerWidth;
 
+//Loader
+const loading = document.querySelector('.loading');
+const content = document.querySelector('.content');
+
 // Station Markers
 const airport = L.circleMarker([72.11, 8.33], {
   radius: 5,
@@ -674,7 +678,6 @@ const stationList = [
   }
 ];
 
-
 // Align map according to client's browser width
 function mapPositionTwo() {
   if (width >= 1281) {
@@ -781,6 +784,10 @@ async function monumentData() {
     { platform: "3/4", url: "https://metro-rti.nexus.org.uk/api/times/MTW/1" },
   ];
 
+  let hr = new Date().getHours();
+  let min = new Date().getMinutes();
+  min = min > 9 ? min : "0" + min;
+
   let popupContent = `<strong class="center">Monument Station</strong>`;
 
   try {
@@ -796,6 +803,7 @@ async function monumentData() {
       } else {
         trains.slice(0, 3).forEach(train => {
           const lineColor = train.line === "GREEN" ? "#3db94d" : "#fab217";
+          train.dueIn === -1 ? train.dueIn = "Now" : train.dueIn = `${train.dueIn} min`;
           popupContent += `
             <div style="margin-top: 6px;">
               <table>
@@ -807,17 +815,17 @@ async function monumentData() {
                 </tr>
                 <tr>
                   <td> ${train.trn}</td>
-                  <td> ${train.dueIn} min</td>
+                  <td> ${train.dueIn}</td>
                   <td> ${train.destination}</td>
                   <td style="background-color:${lineColor}"> ${train.line}</td>
                 </tr>
-              </table>
+              </table>             
             </div>
           `;
-        });
-      }
+        });       
+      } 
     }
-
+    popupContent += `<hr><em>Last updated: ${hr}:${min}<em>`
     monument1.bindPopup(popupContent);
     monument2.bindPopup(popupContent);
 
@@ -836,6 +844,10 @@ async function loadAllStationData() {
       { platform: 2, url: `https://metro-rti.nexus.org.uk/api/times/${station.code}/2` }
     ];
 
+    let hr = new Date().getHours();
+    let min = new Date().getMinutes();
+    min = min > 9 ? min : "0" + min;
+
     let popupContent = `<strong class="center">${station.name} Station</strong>`;
 
     try {
@@ -851,6 +863,7 @@ async function loadAllStationData() {
         } else {
           trains.slice(0, 3).forEach(train => {
             const lineColor = train.line === "GREEN" ? "#3db94d" : "#fab217";
+            train.dueIn === -1 ? train.dueIn = "Now" : train.dueIn = `${train.dueIn} min`;
             popupContent += `
               <div style="margin-top: 6px;">
               <table>
@@ -862,7 +875,7 @@ async function loadAllStationData() {
                 </tr>
                 <tr>
                   <td> ${train.trn}</td>
-                  <td> ${train.dueIn} min</td>
+                  <td> ${train.dueIn}</td>
                   <td> ${train.destination}</td>
                   <td style="background-color:${lineColor}"> ${train.line}</td>
                 </tr>
@@ -873,6 +886,7 @@ async function loadAllStationData() {
         }
       }
 
+    popupContent += `<hr><em>Last updated: ${hr}:${min}<em>`
     // Bind the popup to the station's marker
     station.marker.bindPopup(popupContent);
     station.marker2?.bindPopup(popupContent);
@@ -884,6 +898,11 @@ async function loadAllStationData() {
 };
 
 loadAllStationData();
+
+setTimeout(() => {
+  loading.style.opacity = "0";
+  content.style.opacity = "1";
+}, 2000);
 
 //Refresh API data every 60 seconds
 setInterval(() => {

@@ -2,7 +2,7 @@ body, html {
   margin: 0;
 }
 #map {
-min-height: 98vh;
+min-height: 97vh;
 background: white; 
 }
 
@@ -43,7 +43,9 @@ table {
 
   tr:nth-child(2) {
     background-color: #dee2e6;
-    }
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
 
 .white-bg {
   color: white;
@@ -63,4 +65,60 @@ button {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.bot {
+  position: absolute;
+  bottom: 0;
+  margin-top: 10px;
+}
+
+.loadingText {
+  position: absolute; 
+  margin-top: 63px; 
+  text-align:center; 
+  font-size: 2em; 
+  font-family: "Rubik", sans-serif; 
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  transition: 0.5s;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+.loading::after {
+  content: "";
+  width: 37.6px;
+  height: 37.6px;
+  border: 8px solid black;
+  border-top-color: #fab217;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.content {
+  transition: 0.5s;
+  opacity:0;
+}
+
+@media screen and (max-width: 600px) {
+  #map {
+    min-height: 95vh;
+    background: white; 
+    }
 }
