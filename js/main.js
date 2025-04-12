@@ -803,7 +803,7 @@ async function monumentData() {
       } else {
         trains.slice(0, 3).forEach(train => {
           const lineColor = train.line === "GREEN" ? "#3db94d" : "#fab217";
-          train.dueIn === -1 ? train.dueIn = "Now" : train.dueIn = `${train.dueIn} min`;
+          train.dueIn === -1 || train.dueIn === 0 ? train.dueIn = "Now" : train.dueIn = `${train.dueIn} min`;
           popupContent += `
             <div style="margin-top: 6px;">
               <table>
@@ -863,7 +863,7 @@ async function loadAllStationData() {
         } else {
           trains.slice(0, 3).forEach(train => {
             const lineColor = train.line === "GREEN" ? "#3db94d" : "#fab217";
-            train.dueIn === -1 ? train.dueIn = "Now" : train.dueIn = `${train.dueIn} min`;
+            train.dueIn === -1 || train.dueIn === 0 ? train.dueIn = "Now" : train.dueIn = `${train.dueIn} min`;
             popupContent += `
               <div style="margin-top: 6px;">
               <table>
