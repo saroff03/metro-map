@@ -8,12 +8,17 @@ background: white;
 }
 
 footer {
-  max-height: 2vh;
-  display: flex;
-  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(248, 249, 250, 0.95); 
   font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  text-align: center;
+  font-size: 1.1rem;
+  border-top: 1px solid #ccc;
+  z-index: 999; 
 }
 
 .center {
